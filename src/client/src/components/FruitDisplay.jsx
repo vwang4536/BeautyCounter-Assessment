@@ -4,7 +4,7 @@ const FruitDisplay = (props) => {
   let { fruit } = props;
   
   return (
-    <div>
+    <div className="fruitDisplay">
       <img className="fruitImage" key={fruit.name} src={fruit.image} alt={fruit.name}/>
       <div>
         <p>Name: {fruit.name}</p>

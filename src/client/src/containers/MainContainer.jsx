@@ -16,10 +16,10 @@ class MainContainer extends React.Component {
   getFruits = async () => {
     try {
       const response = await axios.get('http://localhost:3000/fruits');
+
+      this.resetError();
       this.setState({
         fruits: response.data,
-        displayError: false,
-        errorText: ''
       });
     } catch (error) {
       console.log(error);
@@ -27,25 +27,41 @@ class MainContainer extends React.Component {
   }
 
   getFruit = async (name) => {
-    try {
-      const response = await axios.get('http://localhost:3000/fruit', {
-        params: {
-          name: name
-        }
-      });
-
-      this.setState({
-        fruits: response.data,
-        displayError: false,
-        errorText: '',
-      });
-    } catch (error) {
-      this.setState({
-        fruits: [],
-        displayError: true,
-        errorText: error.response.data
-      });
+    if (name) {
+      try {
+        const response = await axios.get('http://localhost:3000/fruit', {
+          params: {
+            name: name
+          }
+        });
+  
+        this.resetError();
+        this.setState({
+          fruits: response.data,
+        });
+      } catch (error) {
+        this.onDisplayError(error.response.data);
+        this.setState({
+          fruits: [],
+        });
+      }
+    } else {
+      this.onDisplayError('Fruit name is missing in the input box! :(');
     }
+  }
+
+  onDisplayError = (error) => {
+    this.setState({
+      displayError: true,
+      errorText: error
+    });
+  }
+
+  resetError = () => {
+    this.setState({
+      displayError: false,
+      errorText: ''
+    });
   }
 
   render() {
@@ -53,10 +69,15 @@ class MainContainer extends React.Component {
     const fruitDisplay = fruits.map((fruit) => {return <FruitDisplay key={fruit.name} fruit={fruit}/>});
 
     return (
-      <div>
-        <Input getFruit={this.getFruit}/>
-        <button onClick={this.getFruits} type="button">Get All Fruits!</button>
+      <div className="mainContainer">
         <div>
+          <h1>Input a fruit name into the input box below to look at info of fruits!</h1>
+        </div>
+        <div>
+          <Input getFruit={this.getFruit}/>
+          <button onClick={this.getFruits} type="button">Get All Fruits!</button>
+        </div>
+        <div className="fruitDisplayContainer">
           {displayError ? <h3>{errorText}</h3> : fruitDisplay}
         </div>
       </div>
