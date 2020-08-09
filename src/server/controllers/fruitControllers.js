@@ -11,7 +11,7 @@ async function getFruits(req, res) {
     res.send(fruits);
   } catch(err) {
     res.status(400).send(err);
-  };
+  }
 };
 
 /**
@@ -22,7 +22,7 @@ async function getFruits(req, res) {
  */
 async function getFruit(req, res) {
   let { name } = req.query;
-  console.log('namess', name)
+
   // Set name to lower case as fruits are saved as lowercase in database
   name = name.toLowerCase();
 
@@ -32,11 +32,11 @@ async function getFruit(req, res) {
     if (fruit.length) {
       res.send(fruit);
     } else {
-      res.status(404).send(`Sorry, ${name} was not found in the database`);
+      res.status(404).send(`Sorry, ${name} was not found in the database. :(`);
     };
   } catch(err) {
     res.status(400).send(err);
-  };
+  }
 };
 
 module.exports = { getFruits, getFruit };
