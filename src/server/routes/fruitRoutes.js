@@ -4,5 +4,6 @@ const getFruits = require('../controllers/fruitControllers');
 
 // Routes: GET
 app.get('/fruits', getFruits);
+app.get('/fruit');
 
 module.exports = app;
