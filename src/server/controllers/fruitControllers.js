@@ -32,7 +32,7 @@ async function getFruit(req, res) {
     if (fruit.length) {
       res.send(fruit);
     } else {
-      res.status(400).send(`Sorry, ${name} was not found in the database`);
+      res.status(404).send(`Sorry, ${name} was not found in the database`);
     };
   } catch(err) {
     res.status(400).send(err);
