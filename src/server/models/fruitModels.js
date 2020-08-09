@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// require('mongoose-type-url')
+require('mongoose-type-url');
 
 // Create schema for fruit details in collection
 const FruitSchema = new mongoose.Schema({
@@ -19,3 +19,8 @@ const FruitSchema = new mongoose.Schema({
     trim: true,
   }   
 });
+
+// 
+const Fruits = mongoose.model('fruit', FruitSchema);
+
+module.exports = Fruits;
