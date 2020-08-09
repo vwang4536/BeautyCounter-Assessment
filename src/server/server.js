@@ -1,11 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const fruitRoutes = require('./routes/fruitRoutes');
+const cors = require('cors');
+
 require('dotenv').config();
 
 // Configure server
 const app = express();
 const port = 3000;
+app.use(cors);
 
 // Set up route use
 app.use(fruitRoutes);
