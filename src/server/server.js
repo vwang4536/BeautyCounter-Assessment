@@ -8,7 +8,7 @@ require('dotenv').config();
 // Configure server
 const app = express();
 const port = 3000;
-app.use(cors);
+app.use(cors());
 
 // Set up route use
 app.use(fruitRoutes);
