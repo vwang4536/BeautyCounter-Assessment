@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import FruitDisplay from './components/FruitDisplay';
+import Input from './components/Input';
 
 // function App() {
   // return (
@@ -29,20 +30,40 @@ class App extends React.Component {
     super(props)
     this.state = {
       fruits: [],
+      inputText: '',
+      displayError: false,
     }
-
-    this.getFruits = this.getFruits.bind(this);
   }
 
-  async getFruits() {
+  getFruits = async () => {
     try {
       const response = await axios.get('http://localhost:3000/fruits');
       this.setState({
         fruits: response.data
       });
-      console.log(this.state)
+
     } catch (error) {
       console.log(error);
+    }
+  }
+
+  getFruit = async (name) => {
+    try {
+      const response = await axios.get('http://localhost:3000/fruit', {
+        params: {
+          name: name
+        }
+      });
+
+      this.setState({
+        fruits: response.data
+      });
+    } catch (error) {
+      console.log(error.response.data)
+      this.setState({
+        fruits: [],
+        displayError: true,
+      });
     }
   }
 
@@ -56,9 +77,10 @@ class App extends React.Component {
             Edit <code>src/App.js</code> and save to reload.
           </p>
         </header> */}
-        <button onClick={this.getFruits} type="button">Get All Fruits</button>
+        <Input getFruit={this.getFruit}/>
+        <button onClick={this.getFruits} type="button">Get All Fruits!</button>
         <div>
-          {fruits.map((fruit) => {return <FruitDisplay fruit/>})}
+          {fruits.map((fruit) => {return <FruitDisplay key={fruit.name} fruit={fruit}/>})}
         </div>
       </div>
     );

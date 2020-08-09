@@ -22,7 +22,7 @@ async function getFruits(req, res) {
  */
 async function getFruit(req, res) {
   let { name } = req.query;
-
+  console.log('namess', name)
   // Set name to lower case as fruits are saved as lowercase in database
   name = name.toLowerCase();
 
