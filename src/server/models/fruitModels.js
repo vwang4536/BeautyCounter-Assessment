@@ -20,7 +20,7 @@ const FruitSchema = new mongoose.Schema({
   }   
 });
 
-// 
+// Creates fruits model connecting to input collection
 const Fruits = mongoose.model('fruits', FruitSchema);
 
 module.exports = Fruits;
