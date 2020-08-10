@@ -19,6 +19,12 @@ git clone https://github.com/vwang4536/BeautyCounter-Assessment.git
 
 - Copy .env file that will be given into the server folder
    - Note: If .env file was not given, please email me at vwang4536@gmail.com
+
+- Open application directory
+```
+cd BeautyCounter-Assessment
+```
+
 - Open client directory and install packages
 ```
 cd src/client
