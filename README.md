@@ -1,6 +1,12 @@
 # BeautyCounter-Assessment
 Fruit Dictionary is an application to check the weight and image of fruits. This application is created with Create-React-App and contains REST API to obtain information on fruit to be displayed on the client. MongoDB is implemented to save the data for the fruits.
 
+Possible fruits to search up are:
+   - Strawberry
+   - Blueberry
+   - Mango
+   - Orange
+
 Note: In order to connect to the database, .env file must be added. I will send the .env file to Lisa along with the link to this repo. 
 
 Thank you for this opportunity!
