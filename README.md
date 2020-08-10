@@ -11,7 +11,7 @@ Note: In order to connect to the database, .env file must be added. I will send 
 
 Thank you for this opportunity!
 
-# How To Use
+# How To Install
 - Git Clone this repository (git@github.com:vwang4536/BeautyCounter-Assessment.git)
 ```
 git clone git@github.com:vwang4536/BeautyCounter-Assessment.git
@@ -33,3 +33,8 @@ npm install
 ```
 npm run start-application
 ```
+
+# How To Use
+- Type in a fruit name from the list of fruits above into the input box and click the 'Get Fruit!' button to view weight and image of that fruit
+- Click on 'Get All Fruits!' to view all fruits that are saved
+- Application also handles errors when fruits that are inputted are not saved
