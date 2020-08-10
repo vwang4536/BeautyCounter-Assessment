@@ -12,9 +12,9 @@ Note: In order to connect to the database, .env file must be added. I will send 
 Thank you for this opportunity!
 
 # How To Install
-- Git Clone this repository (git@github.com:vwang4536/BeautyCounter-Assessment.git)
+- Git Clone this repository (https://github.com/vwang4536/BeautyCounter-Assessment.git)
 ```
-git clone git@github.com:vwang4536/BeautyCounter-Assessment.git
+git clone https://github.com/vwang4536/BeautyCounter-Assessment.git
 ```
 
 - Copy .env file that will be given into the server folder
