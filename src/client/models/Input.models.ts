@@ -5,5 +5,5 @@ export interface InputStateModel {
 };
 
 export interface InputPropsModel {
-  getFruit: (name: string) => Promise<FruitResponseModel[] | string>
+  getFruit: (name: string) => Promise<FruitResponseModel[] | string>;
 };
