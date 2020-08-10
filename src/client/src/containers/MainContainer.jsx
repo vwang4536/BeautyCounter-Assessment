@@ -13,9 +13,10 @@ class MainContainer extends React.Component {
     }
   }
 
+  // Grabs all fruits
   getFruits = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/fruits');
+      const response = await axios.get('http://localhost:4000/fruits');
 
       this.resetError();
       this.setState({
@@ -25,11 +26,12 @@ class MainContainer extends React.Component {
       console.log(error);
     }
   }
-
+  
+  // Grabs one fruit
   getFruit = async (name) => {
     if (name) {
       try {
-        const response = await axios.get('http://localhost:3000/fruit', {
+        const response = await axios.get('http://localhost:4000/fruit', {
           params: {
             name: name
           }
@@ -40,6 +42,7 @@ class MainContainer extends React.Component {
           fruits: response.data,
         });
       } catch (error) {
+        console.log(error.response)
         this.onDisplayError(error.response.data);
         this.setState({
           fruits: [],
@@ -50,6 +53,7 @@ class MainContainer extends React.Component {
     }
   }
 
+  // Set displayError flag to display error
   onDisplayError = (error) => {
     this.setState({
       displayError: true,
@@ -57,6 +61,7 @@ class MainContainer extends React.Component {
     });
   }
 
+  // Reset displayError flag and error
   resetError = () => {
     this.setState({
       displayError: false,

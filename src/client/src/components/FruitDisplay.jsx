@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+// Presentational Component for Fruits
 const FruitDisplay = (props) => {
   let { fruit } = props;
 

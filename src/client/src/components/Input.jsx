@@ -9,6 +9,7 @@ class Input extends React.Component {
     }
   }
 
+  // Update local state with inputted text
   setText = (event) => {
     this.setState({
       inputText: event.target.value,
