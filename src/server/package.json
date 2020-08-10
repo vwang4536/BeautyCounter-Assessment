@@ -4,7 +4,7 @@
   "description": "Backend for BeautyCounter Technical Assessment - Fruits",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server.js"
   },
   "repository": {
@@ -26,6 +26,8 @@
     "mongoose-type-url": "^2.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "jest": "^26.2.2",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
   }
 }
