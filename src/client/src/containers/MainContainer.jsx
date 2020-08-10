@@ -71,11 +71,15 @@ class MainContainer extends React.Component {
     return (
       <div className="mainContainer">
         <div>
-          <h1>Input a fruit name into the input box below to look at info of fruits!</h1>
+          <h1>Fruit Dictionary</h1>
+        </div>
+        <div>
+          <h2>Input a fruit name into the input box below to look at info of fruits!</h2>
         </div>
         <div>
           <Input getFruit={this.getFruit}/>
-          <button onClick={this.getFruits} type="button">Get All Fruits!</button>
+          <h2>Or click this button to view all fruits!</h2>
+          <button className="fruitButton" onClick={this.getFruits} type="button">Get All Fruits!</button>
         </div>
         <div className="fruitDisplayContainer">
           {displayError ? <h3>{errorText}</h3> : fruitDisplay}

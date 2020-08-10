@@ -20,9 +20,9 @@ class Input extends React.Component {
     const name = this.state.inputText;
     
     return (
-      <div>
-        <input onChange={this.setText} type="text" id="inputbox" placeholder="Input a fruit name to look up its info!"/>
-        <input onClick={() => {getFruit(name)}} type="submit" value="Get Fruit!"/>
+      <div className="inputContainer">
+        <input className="fruitInput" onChange={this.setText} type="text" id="inputbox" placeholder="Input a fruit name to look up its info!"/>
+        <input className="fruitButton"onClick={() => {getFruit(name)}} type="submit" value="Get Fruit!"/>
       </div>
     )
   }
