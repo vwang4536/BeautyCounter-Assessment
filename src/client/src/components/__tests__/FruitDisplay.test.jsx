@@ -8,7 +8,7 @@ describe('FruitDisplay', () => {
       name: 'pineapple',
       weight: 5,
       image: 'test'
-    }
+    };
     const wrapper = shallow(<FruitDisplay fruit={mockFruit} />);
     expect(wrapper).toMatchSnapshot();
   });

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const FruitDisplay = (props) => {
   let { fruit } = props;
 
