@@ -24,6 +24,10 @@ class MainContainer extends React.Component {
       });
     } catch (error) {
       console.log(error);
+      this.onDisplayError(error.response.data);
+      this.setState({
+        fruits: [],
+      });
     }
   }
   

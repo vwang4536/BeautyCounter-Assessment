@@ -49,7 +49,7 @@ describe('GET /fruit', () => {
         "name": "mango",
         "weight": 20,
       }
-    ])
+    ]);
 
     done();
   });
