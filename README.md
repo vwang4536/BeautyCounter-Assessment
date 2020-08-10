@@ -7,9 +7,9 @@ Possible fruits to search up are:
    - Mango
    - Orange
 
-Note: In order to connect to the database, .env file must be added. I will send the .env file to Lisa along with the link to this repo. 
+Note: .env is currently not tracked by Git as it is implemented in .gitignore. In order to connect to the database, the .env file must be added into the server folder. I will send the .env file to Lisa along with the link to this repo. 
 
-Thank you for this opportunity!
+Thank you for this opportunity! :)
 
 # How To Install
 - Git Clone this repository (https://github.com/vwang4536/BeautyCounter-Assessment.git)
@@ -18,7 +18,7 @@ git clone https://github.com/vwang4536/BeautyCounter-Assessment.git
 ```
 
 - Copy .env file that will be given into the server folder
-   - Note: If .env file was not given, please email me at vwang4536@gmail.com
+   - Note: If the .env file cannot be sent, please email me at vwang4536@gmail.com and I will implement the authentication info into the URI connection string.
 
 - Open application directory
 ```
