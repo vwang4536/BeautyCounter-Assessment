@@ -13,7 +13,7 @@ const FruitDisplay: FunctionComponent<FruitPropsModel> = (props: FruitPropsModel
         <p>Weight: {fruit.weight} grams</p>
       </div>
     </div>
-  )
+  );
 }
 
 export default FruitDisplay;

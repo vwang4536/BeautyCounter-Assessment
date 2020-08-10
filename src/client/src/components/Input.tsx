@@ -29,7 +29,7 @@ class Input extends React.Component<InputPropsModel, InputStateModel> {
         <input className="fruitInput" onChange={this.setText} type="text" id="inputbox" placeholder="Input a fruit name to look up its info!"/>
         <input className="fruitButton"onClick={() => {getFruit(name)}} type="submit" value="Get Fruit!"/>
       </div>
-    )
+    );
   }
 }
 
